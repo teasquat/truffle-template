@@ -25,6 +25,11 @@ module Prism
     File.read load_state(env.params.url["path"])
   end
 
+  get "/stuff/:path" do |env|
+    env.response.content_type = "application/javascript"
+    File.read load_stuff(env.params.url["path"])
+  end
+
   # load assets
   get "/assets/:path" do |env|
     File.read load_asset(env.params.url["path"])

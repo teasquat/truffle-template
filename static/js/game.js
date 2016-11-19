@@ -1,13 +1,15 @@
-var game = new Phaser.Game(640, 480, Phaser.AUTO, "game", {
-  create: create,
-});
+var Truffle = Truffle || {};
 
-function create() {
-  game.add.plugin(Phaser.Plugin.ECS);
+Truffle.game = new Phaser.Game(640, 480, Phaser.AUTO, "game", {
+  create: Truffle.create,
+}, false, false);
 
-  game.state.add("boot", boot_state);
-  game.state.add("preload", preload_state);
-  game.state.add("play", play_state);
-
-  game.state.start("boot");
+Truffle.create = function() {
+  this.game.add.plugin(Phaser.Plugin.ECS);
 }
+
+Truffle.game.state.add("boot", Truffle.boot_state);
+Truffle.game.state.add("preload", Truffle.preload_state);
+Truffle.game.state.add("play", Truffle.play_state);
+
+Truffle.game.state.start("boot");

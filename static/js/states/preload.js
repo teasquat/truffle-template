@@ -1,9 +1,13 @@
-var preload_state = {
+var Truffle = Truffle || {};
+
+Truffle.preload_state = function(){};
+
+Truffle.preload_state.prototype = {
   preload: function() {
-    game.load.image("player", "assets/dude.png");
+    this.game.load.image("player", "assets/dude.png");
   },
 
   create: function() {
-    game.state.start("play");
+    this.game.state.start("play");
   }
 };
