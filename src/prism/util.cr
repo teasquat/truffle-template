@@ -10,6 +10,10 @@ def load_state(path)
   "static/js/states/#{path}"
 end
 
+def load_tilemap(path)
+  "static/assets/tilemaps/#{path}"
+end
+
 def load_stuff(path)
   "static/js/stuff/#{path}"
 end
