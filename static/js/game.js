@@ -1,6 +1,7 @@
-var Platformer = new Phaser.Game(640, 480, Phaser.AUTO, 'game', null, false, false);
+var game = new Phaser.Game(640, 480, Phaser.AUTO, 'game', null, false, false);
 
-Platformer.state.add("boot", boot_state);
-Platformer.state.add("preload", preload_state);
+game.state.add("boot", boot_state);
+game.state.add("preload", preload_state);
+game.state.add("play", play_state);
 
-Platformer.state.start("boot");
+game.state.start("boot");

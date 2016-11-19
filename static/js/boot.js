@@ -1,5 +1,5 @@
 var boot_state = {
     create: function() {
-        Platformer.state.start("preload");
+        game.state.start("preload");
     }
 };
