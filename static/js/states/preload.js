@@ -10,9 +10,11 @@ Truffle.preload_state.prototype = {
     this.load.setPreloadSprite(this.preload_bar);
 
     this.load.tilemap("map", "/tilemaps/map.json", null, Phaser.Tilemap.TILED_JSON);
+
+    this.load.image("tiles", "/assets/tiles.png");
   },
 
   create: function() {
-    this.game.state.start("play");
+    this.game.state.start("menu");
   },
 };
