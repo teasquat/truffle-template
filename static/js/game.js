@@ -1,6 +1,6 @@
-var GiffelHunter = new Phaser.Game(640, 480, Phaser.AUTO, 'game', null, false, false);
+var Platformer = new Phaser.Game(640, 480, Phaser.AUTO, 'game', null, false, false);
 
-GiffelHunter.state.add("boot", bootState);
-GiffelHunter.state.add("preload", preloadState);
+Platformer.state.add("boot", boot_state);
+Platformer.state.add("preload", preload_state);
 
-GiffelHunter.state.start("boot");
+Platformer.state.start("boot");
